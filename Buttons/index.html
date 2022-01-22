@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+</head>
+<style>
+    body{
+        background-color: rgb(34, 31, 31);
+    }
+    .btn{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(24, 22, 22);
+        border-radius: 20px;
+        margin: 100px auto;
+    }
+    .btn-baby{
+        width: 150px;
+        height: 150px;
+        position: relative;
+        top: 23px;
+        left: 25px;
+        background-color: rgb(37, 30, 30);
+        border-radius: 20px;
+        z-index: 2;
+        box-shadow: 20px 20px 10px rgb(22, 18, 18),
+        0px 20px 10px rgb(22, 18, 18),
+        20px 0px 10px rgb(22, 18, 18)
+        ;        
+        /* transition: .09s; */
+    }
+    .btn-baby:active{
+        /* box-shadow: -15px -15px 10px rgb(22, 18, 18),
+        -20px 0px 10px rgb(22, 18, 18),
+        0px -15px 10px rgb(22, 18, 18)
+        ; */
+        width: 140px;
+        height: 140px;
+        position: relative;
+    }
+    .btn-baby2{
+        position: relative;
+        width: 170px;
+        height: 170px;
+        background-color: rgb(183, 0, 255);
+        border-radius: 20px;
+        top: -135px;
+        left: 15px;
+        z-index: 1;
+    }
+    h1{
+        text-align: center;
+        position: relative;
+        top: 50px;
+        font-size: 3em;
+        color: rgb(255, 0, 0);
+    }
+</style>
+<body>
+    <div class="btn">
+        <div class="btn-baby"><h1>Yes</h1></div>
+        <div class="btn-baby2"></div>
+    </div>
+</body>
+</html>

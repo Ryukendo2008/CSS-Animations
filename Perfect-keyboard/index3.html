@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<style>
+          * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    font-family: consolas;
+          }
+
+          body {
+                    /* display: flex; */
+                    justify-content: center;
+                    align-items: center;
+                    min-height: 100vh;
+                    background-image: url('doreamon.jpg');
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+          }
+
+          span {
+                    position: relative;
+                    display: inline-block;
+                    width: 58px;
+                    height: 50px;
+                    padding: 5px 8px;
+                    margin: 1px 0.5px;
+                    border-radius: 10px;
+                    background: linear-gradient(180deg, #282828, #202020);
+                    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+                              inset 0 -8px 8px rgba(0, 0, 0, 0.25),
+                              0 0 0 2px rgba(0, 0, 0, 0.75),
+                              10px, 20px, 25px rgba(0, 0, 0, 0.4);
+                    overflow: hidden;
+          }
+
+          span::before {
+                    content: '';
+                    position: absolute;
+                    top: 3px;
+                    left: 4px;
+                    bottom: 10px;
+                    right: 12px;
+                    background: linear-gradient(90deg, #232323, #4a4a4a);
+                    border-radius: 10px;
+                    box-shadow: -8px -8px 10px rgba(255, 255, 255, 0.25),
+                              10px 5px 10px rgba(0, 0, 0, 0.15);
+                    border-left: 1px solid #0004;
+                    border-bottom: 1px solid #0004;
+                    border-top: 1px solid #0009;
+
+          }
+
+          span i {
+                    position: relative;
+                    color: #fff;
+                    margin-left: 10px;
+                    font-weight: 5px;
+          }
+
+          .t {
+                    width: 10%;
+          }
+
+          .c {
+                    width: 12%;
+          }
+
+          .s {
+                    width: 13%;
+          }
+
+          .ct {
+                    width: 7.7%;
+          }
+
+          .space {
+                    width: 43%;
+          }
+
+          .b {
+                    width: 16%;
+          }
+
+          .e {
+                    width: 14%;
+          }
+
+          .m {
+                    width: 50px;
+          }
+
+          .last {
+                    width: 5%;
+          }
+
+          .box {
+                    /* border: 4px solid rgb(97, 94, 94); */
+                    width: 1050px;
+                    padding-left: 18px;
+                    height: 420px;
+                    padding-top: 10px;
+                    border-radius: 16px;
+                    /* background: linear-gradient(orange, violet); */
+                    background: rgb(44, 43, 43);
+                    margin-top: 100px;
+                    margin-left: 200px;
+                    /* position: relative;*/
+                    border: 4px solid;
+                    border-radius: 16px;
+                    background-clip: padding-box;
+                    /* just to show box-shadow still works fine */
+                    box-shadow: 30px 30px 70px rgb(27, 26, 26);
+                    animation: anime 4s linear infinite;
+                    border-image: linear-gradient(red, blue);
+                    border-image-slice: 1;
+          }
+
+          @keyframes anime {
+                    0% {
+                              border-image: linear-gradient(red, blue);
+                    }
+
+                    25% {
+                              border-image: linear-gradient(orangered, aqua);
+                    }
+
+                    50% {
+                              border-image: linear-gradient(deeppink, blueviolet);
+                    }
+
+                    100% {
+                              border-image: linear-gradient(red, blue);
+                    }
+          }
+
+          /* 
+          .box::after {
+                    position: absolute;
+                    top: -15px;
+                    bottom: -15px;
+                    left: -15px;
+                    right: -15px;
+                    content: '';
+                    z-index: -1;
+                    border-radius: 16px;
+                    background: linear-gradient(red, blue);
+          } */
+
+          .input {
+                    margin: 20px auto;
+                    width: 95%;
+          }
+
+          input {
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 10px;
+          }
+</style>
+
+<body>
+          <div class="box">
+                    <div class="input">
+                              <input id="s" type="text" name="s">
+                    </div>
+                    <span id="btn" onclick="btnClick('1')"><i id="bk">1</i></span>
+                    <span id="btn" onclick="btnClick('2')"><i id="bk">2</i></span>
+                    <span id="btn" onclick="btnClick('3')"><i id="bk">3</i></span>
+                    <span id="btn" onclick="btnClick('4')"><i id="bk">4</i></span>
+                    <span id="btn" onclick="btnClick('5')"><i id="bk">5</i></span>
+                    <span id="btn" onclick="btnClick('6')"><i id="bk">6</i></span>
+                    <span id="btn" onclick="btnClick('7')"><i id="bk">7</i></span>
+                    <span id="btn" onclick="btnClick('8')"><i id="bk">8</i></span>
+                    <span id="btn" onclick="btnClick('9')"><i id="bk">9</i></span>
+                    <span id="btn" onclick="btnClick('0')"><i id="bk">0</i></span>
+                    <span id="btn" onclick="btnClick('+')"><i id="bk">+</i></span>
+                    <span id="btn" onclick="btnClick('-')"><i id="bk">-</i></span>
+                    <span id="btn" onclick="btnClick('*')"><i id="bk">*</i></span>
+                    <span id="btn" onclick="btnClick('/')"><i id="bk">/</i></span>
+                    <br>
+                    <span id="btn" class="t" onclick="TabClick('    ')"><i id="bk">Tab</i></span>
+                    <span id="btn" onclick="btnClick('Q')"><i id="bk">Q</i></span>
+                    <span id="btn" onclick="btnClick('W')"><i id="bk">W</i></span>
+                    <span id="btn" onclick="btnClick('E')"><i id="bk">E</i></span>
+                    <span id="btn" onclick="btnClick('R')"><i id="bk">R</i></span>
+                    <span id="btn" onclick="btnClick('T')"><i id="bk">T</i></span>
+                    <span id="btn" onclick="btnClick('Y')"><i id="bk">Y</i></span>
+                    <span id="btn" onclick="btnClick('U')"><i id="bk">U</i></span>
+                    <span id="btn" onclick="btnClick('I')"><i id="bk">I</i></span>
+                    <span id="btn" onclick="btnClick('O')"><i id="bk">O</i></span>
+                    <span id="btn" onclick="btnClick('P')"><i id="bk">P</i></span>
+                    <span id="btnclr" class="b" onclick="s.value=null"><i id="bk">BackSpace</i></span>
+                    <br>
+                    <span id="capL" class="c"><i id="bk">Caps L</i></span>
+                    <span id="btn" onclick="btnClick('A')"><i id="bk">A</i></span>
+                    <span id="btn" onclick="btnClick('S')"><i id="bk">S</i></span>
+                    <span id="btn" onclick="btnClick('D')"><i id="bk">D</i></span>
+                    <span id="btn" onclick="btnClick('F')"><i id="bk">F</i></span>
+                    <span id="btn" onclick="btnClick('G')"><i id="bk">G</i></span>
+                    <span id="btn" onclick="btnClick('H')"><i id="bk">H</i></span>
+                    <span id="btn" onclick="btnClick('J')"><i id="bk">J</i></span>
+                    <span id="btn" onclick="btnClick('K')"><i id="bk">K</i></span>
+                    <span id="btn" onclick="btnClick('L')"><i id="bk">L</i></span>
+                    <span id="btn" onclick="btnClick(':')"><i id="bk">:</i></span>
+                    <span id="btn" class="e" onclick="s.value=eval(s.value)"><i id="bk">Enter</i></span>
+                    <br>
+                    <span id="btn" class="s"><i id="bk">Shift</i></span>
+                    <span id="btn" onclick="btnClick('Z')"><i id="bk">Z</i></span>
+                    <span id="btn" onclick="btnClick('X')"><i id="bk">X</i></span>
+                    <span id="btn" onclick="btnClick('C')"><i id="bk">C</i></span>
+                    <span id="btn" onclick="btnClick('V')"><i id="bk">V</i></span>
+                    <span id="btn" onclick="btnClick('B')"><i id="bk">B</i></span>
+                    <span id="btn" onclick="btnClick('N')"><i id="bk">N</i></span>
+                    <span id="btn" onclick="btnClick('M')"><i id="bk">M</i></span>
+                    <span id="btn" onclick="btnClick(',')"><i id="bk">,</i></span>
+                    <span id="btn" onclick="btnClick('.')"><i id="bk">.</i></span>
+                    <span id="btn" onclick="btnClick(';')"><i id="bk">;</i></span>
+                    <span id="btn" class="s"><i id="bk">Shift</i></span>
+                    <br>
+                    <span id="btn" onclick="btnClick()" class="ct"><i id="bk">Ctrl</i></span>
+                    <span id="btn" onclick="btnClick('&')" class="last"><i id="bk">&</i></span>
+                    <span id="btn" onclick="btnClick()" class="ct"><i id="bk">Alt</i></span>
+                    <span id="btn" onclick="spaceClick(' ')" class="space"><i id="bk"></i></span>
+                    <span id="btn" onclick="btnClick()" class="ct"><i id="bk">Alt</i></span>
+                    <span id="btn" onclick="btnClick('(')" class="last"><i id="bk">(</i></span>
+                    <span id="btn" onclick="btnClick(')')" class="last"><i id="bk">)</i></span>
+                    <span id="btn" class="ct" onclick="btnClick('Ctrl')"><i id="bk">Ctrl</i></span>
+          </div>
+
+          <script>
+                    function btnClick(k) {
+                              document.getElementById('s').value = document.getElementById('s').value + k;
+                    };
+                    function TabClick(k) {
+                              document.getElementById('s').value = document.getElementById('s').value + k;
+                    };
+                    function spaceClick(k) {
+                              document.getElementById('s').value = document.getElementById('s').value + k;
+                    };
+                    if (document.getElementById('s').style.textTransform = "uppercase") {
+                              document.getElementById('capL').addEventListener('click', function () {
+                                        document.getElementById('s').style.textTransform = "lowercase";
+                              })
+                    }
+                    else {
+                              document.getElementById('s').style.textTransform = "uppercase";
+                    }
+          </script>
+
+</body>
+
+</html>

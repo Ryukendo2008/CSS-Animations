@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Clock</title>
+</head>
+<style>
+          * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+          }
+
+          body {
+                    min-height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+          }
+
+          .box {
+                    width: 600px;
+                    height: 600px;
+                    border: 10px black solid;
+                    border-radius: 50%;
+                    animation: anime 4s linear infinite;
+          }
+
+          @keyframes anime {
+                    0% {
+                              border: 10px black solid;
+                    }
+
+                    20% {
+                              border: 10px orangered solid;
+                    }
+
+                    40% {
+                              border: 10px red solid;
+                    }
+
+                    60% {
+                              border: 10px deeppink solid;
+                    }
+
+                    80% {
+                              border: 10px rgb(14, 14, 212) solid;
+                    }
+
+                    100% {
+                              border: 10px black solid;
+                    }
+          }
+
+          h2:nth-child(1) {
+                    position: relative;
+                    top: 5px;
+                    left: 270px;
+          }
+
+          h2:nth-child(2) {
+                    position: relative;
+                    float: right;
+                    top: -10px;
+                    right: 140px;
+          }
+
+          h2:nth-child(3) {
+                    position: relative;
+                    float: right;
+                    top: 90px;
+                    right: 25px;
+          }
+
+          h2:nth-child(4) {
+                    position: relative;
+                    float: right;
+                    top: 220px;
+                    right: -30px;
+          }
+
+          h2:nth-child(5) {
+                    position: relative;
+                    float: right;
+                    top: 360px;
+                    right: -20px;
+          }
+
+          h2:nth-child(6) {
+                    position: relative;
+                    float: right;
+                    top: 470px;
+                    right: 70px;
+          }
+
+          h2:nth-child(7) {
+                    position: relative;
+                    bottom: -510px;
+                    left: 280px;
+          }
+
+          h2:nth-child(8) {
+                    position: relative;
+                    float: left;
+                    bottom: -410px;
+                    left: 120px;
+          }
+
+          h2:nth-child(9) {
+                    position: relative;
+                    float: left;
+                    bottom: -300px;
+                    left: 20px;
+          }
+
+          h2:nth-child(10) {
+                    position: relative;
+                    float: left;
+                    bottom: -170px;
+                    left: -30px;
+          }
+
+          h2:nth-child(11) {
+                    position: relative;
+                    float: left;
+                    bottom: -50px;
+                    left: -10px;
+          }
+
+          h2:nth-child(12) {
+                    position: relative;
+                    float: left;
+                    bottom: 50px;
+                    left: 30px;
+          }
+
+          .dot {
+                    position: relative;
+                    background-color: black;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    top: 190px;
+                    margin: auto auto;
+                    z-index: -1;
+          }
+
+          .minuteHour {
+                    position: relative;
+                    top: 25px;
+                    left: -10px;
+                    width: 250px;
+                    height: 150px;
+                    border: 1px solid black;
+                    transform: rotate(10deg);
+                    border-right: none;
+                    border-bottom: none;
+          }
+
+          .second {
+                    position: relative;
+                    border: 3px solid red;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    width: 300px;
+                    height: 100px;
+                    transform: rotate(40deg);
+                    top: -280px;
+                    left: -170px;
+                    z-index: -3;
+          }
+
+          h1 {
+                    position: absolute;
+                    top: 290px;
+                    left: 580px;
+                    z-index: -8;
+                    font-family: serif;
+                    font-size: 4em;
+          }
+</style>
+
+<body>
+          <div class="box">
+                    <h2>12</h2>
+                    <h2>1</h2>
+                    <h2>2</h2>
+                    <h2>3</h2>
+                    <h2>4</h2>
+                    <h2>5</h2>
+                    <h2>6</h2>
+                    <h2>7</h2>
+                    <h2>8</h2>
+                    <h2>9</h2>
+                    <h2>10</h2>
+                    <h2>11</h2>
+                    <h1>Clock</h1>
+                    <div class="dot">
+                              <div class="minuteHour"></div>
+                              <div class="second"></div>
+                    </div>
+          </div>
+</body>
+
+</html>

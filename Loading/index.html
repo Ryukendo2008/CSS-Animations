@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Loading</title>
+</head>
+<style>
+          * {
+                    padding: 0;
+                    margin: 0;
+                    box-sizing: border-box;
+          }
+
+          body {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    min-height: 100vh;
+                    background-color: black;
+          }
+
+          .container {
+                    position: relative;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+          }
+
+          .ring {
+                    position: relative;
+                    width: 150px;
+                    height: 150px;
+                    margin: -30px;
+                    border-radius: 50%;
+                    border: 4px solid transparent;
+                    border-top: 5px solid aqua;
+                    animation: anime 4s linear infinite;
+          }
+
+          @keyframes anime {
+                    0% {
+                              transform: rotate(0deg);
+                    }
+
+                    100% {
+                              transform: rotate(360deg);
+                    }
+          }
+
+          .ring::before {
+                    content: '';
+                    position: absolute;
+                    top: 12px;
+                    right: 12px;
+                    border-radius: 50%;
+                    width: 15px;
+                    height: 15px;
+                    background-color: aqua;
+                    box-shadow: 0 0 0 5px rgba(21, 154, 127, 0.993),
+                              0 0 0 10px rgba(13, 125, 97, 0.803),
+                              0 0 0 17px rgba(6, 88, 73, 0.667);
+                    ;
+          }
+
+
+          .ring:nth-child(3) {
+                    position: absolute;
+                    top: -66.66px;
+                    animation: anime2 linear 4s infinite;
+                    animation-delay: -3s;
+                    border-left: 4px solid deeppink;
+                    border-top: 4px solid transparent;
+          }
+
+          .ring:nth-child(3):before {
+                    content: '';
+                    position: absolute;
+                    top: initial;
+                    bottom: 12px;
+                    left: 12px;
+                    border-radius: 50%;
+                    width: 15px;
+                    height: 15px;
+                    background-color: rgb(255, 0, 221);
+                    box-shadow: 0 0 0 5px rgba(191, 11, 158, 0.98),
+                              0 0 0 10px rgba(120, 9, 128, 0.803),
+                              0 0 0 17px rgba(74, 7, 52, 0.667);
+                    ;
+          }
+
+          .ring:nth-child(2) {
+                    animation: anime2 linear 4s infinite;
+                    border-top: 4px solid transparent;
+                    border-left: 4px solid yellow;
+                    animation-delay: -1s;
+          }
+
+          .ring:nth-child(2):before {
+                    content: '';
+                    position: absolute;
+                    top: initial;
+                    bottom: 12px;
+                    left: 12px;
+                    border-radius: 50%;
+                    width: 15px;
+                    height: 15px;
+                    background-color: rgb(255, 247, 0);
+                    box-shadow: 0 0 0 5px rgba(191, 185, 11, 0.98),
+                              0 0 0 10px rgba(101, 98, 10, 0.803),
+                              0 0 0 17px rgba(71, 74, 7, 0.667);
+                    ;
+          }
+
+          @keyframes anime2 {
+                    0% {
+                              transform: rotate(360deg);
+                    }
+
+                    100% {
+                              transform: rotate(0deg);
+                    }
+          }
+
+          p {
+                    color: white;
+                    position: absolute;
+                    font-family: sans-serif;
+                    font-weight: 600;
+                    font-size: 1.5em;
+                    bottom: -120px;
+          }
+</style>
+
+<body>
+          <div class="container">
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <p>Loading...</p>
+          </div>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Transparent login form</title>
+</head>
+<style>
+          * {
+                    padding: 0;
+                    margin: 0;
+                    box-sizing: border-box;
+                    font-family: sans-serif;
+                    color: white;
+          }
+
+          .containers {
+                    filter: blur(170px);
+          }
+
+          .container1 {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 600px;
+                    height: 400px;
+                    background-color: deeppink;
+                    z-index: 1;
+          }
+
+          .container2 {
+                    position: absolute;
+                    top: 0px;
+                    right: 180px;
+                    width: 800px;
+                    height: 600px;
+                    background-color: rgb(10, 193, 243);
+          }
+
+          .container3 {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0px;
+                    width: 500px;
+                    height: 300px;
+                    background-color: red;
+                    /* z-index: -1; */
+          }
+
+          .con {
+                    position: relative;
+                    box-shadow: 5px 5px 200px grey,
+                              -5px -5px 200px grey;
+                    width: 400px;
+                    height: 400px;
+                    border-radius: 10px;
+                    margin: auto auto;
+                    top: 100px;
+                    padding: 40px;
+                    background: transparent;
+                    animation: con 4s linear infinite;
+          }
+
+          @keyframes con {
+                    0% {
+                              top: 70px;
+                    }
+
+                    50% {
+                              top: 100px;
+                    }
+
+                    100% {
+                              top: 70px;
+                    }
+          }
+
+          h2 {
+                    display: block;
+                    text-align: center;
+                    margin-bottom: 50px;
+          }
+
+          input {
+                    width: 80%;
+                    height: 30px;
+                    border: none;
+                    border-radius: 20px;
+                    background: transparent;
+                    box-shadow: 5px 5px 10px rgb(88, 81, 81);
+                    padding: 20px;
+                    font-size: large;
+          }
+
+          ::placeholder {
+                    color: white;
+                    font-size: normal;
+          }
+
+          .btn {
+                    padding: 10px;
+                    border-radius: 30px;
+                    color: white;
+                    height: 50px;
+                    width: 150px;
+                    border: none;
+                    display: block;
+                    margin: 0 auto;
+                    font-size: x-large;
+                    background: transparent;
+                    box-shadow: 15px 15px 50px rgb(88, 81, 81);
+                    font-weight: 700;
+          }
+
+          a {
+                    text-decoration: none;
+          }
+
+          a:hover {
+                    text-decoration: underline;
+          }
+
+          .square {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 10px;
+                    background: transparent;
+                    position: absolute;
+                    top: -20px;
+                    right: -70px;
+                    animation: anime 4s infinite linear;
+                    box-shadow: 2px 2px 100px rgb(98, 96, 96);
+          }
+
+          @keyframes anime {
+                    0% {
+                              top: -20px;
+                              right: -70px;
+                    }
+
+                    50% {
+                              top: 20px;
+                              right: -70px;
+                    }
+
+                    100% {
+                              top: -20px;
+                              right: -70px;
+                    }
+          }
+
+          .square2 {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 10px;
+                    background: transparent;
+                    position: absolute;
+                    /* top: 120px;
+                    right: -50px; */
+                    animation: anime2 4s infinite linear;
+                    animation-delay: -3s;
+                    box-shadow: 2px 2px 100px rgb(108, 105, 105);
+          }
+
+          @keyframes anime2 {
+                    0% {
+                              top: 200px;
+                              right: -50px;
+                    }
+
+                    50% {
+                              top: 250px;
+                              right: -50px;
+                    }
+
+                    100% {
+                              top: 200px;
+                              right: -50px;
+                    }
+          }
+
+          .square3 {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 10px;
+                    background: transparent;
+                    position: absolute;
+                    animation: anime3 4s infinite linear;
+                    animation-delay: -3s;
+                    box-shadow: 2px 2px 100px rgb(108, 105, 105);
+          }
+
+          @keyframes anime3 {
+                    0% {
+                              bottom: -60px;
+                              left: 80px;
+                    }
+
+                    50% {
+                              bottom: -60px;
+                              left: 170px;
+                    }
+
+                    100% {
+                              bottom: -60px;
+                              left: 80px;
+                    }
+          }
+
+          .square4 {
+                    width: 90px;
+                    height: 90px;
+                    border-radius: 10px;
+                    background: transparent;
+                    position: absolute;
+                    animation: anime4 4s infinite linear;
+                    animation-delay: -3s;
+                    box-shadow: 2px 2px 100px rgb(108, 105, 105);
+          }
+
+          @keyframes anime4 {
+                    0% {
+                              top: 90px;
+                              left: -60px;
+                    }
+
+                    50% {
+                              top: 150px;
+                              left: -60px;
+                    }
+
+                    100% {
+                              top: 90px;
+                              left: -60px;
+                    }
+          }
+</style>
+
+<body>
+          <div class="containers">
+                    <div class="container1"></div>
+                    <div class="container2"></div>
+                    <div class="container3"></div>
+          </div>
+          <div class="con">
+                    <h2>Login Form</h2>
+                    <form action="#">
+                              Name : <input type="text" placeholder="Enter your name"><br><br>
+                              Email : <input type="email" placeholder="Enter your email"><br><br><br>
+                              <input class="btn" value="Login" type="submit"><br>
+                              <p><a href="#">Forgot password</a></p><br>
+                              <p><a href="#">Use another way to login</a></p>
+                    </form>
+                    <div class="square"></div>
+                    <div class="square2"></div>
+                    <div class="square3"></div>
+                    <div class="square4"></div>
+          </div>
+</body>
+
+</html>
